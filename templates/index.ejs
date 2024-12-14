@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Find Team</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+    <div class="title"> 
+        <h1 id="top5">Top 5 Leagues Soccer Team Stats</h1>
+    </div>
+
+    <br><br><br><br><br><br>
+    <div class ="main">
+        <form action="<%- port %>/teamStats" method="post" onsubmit="return getStats()" id="teamsForm" >
+            <div class="teamsField"> 
+                <select class="league" name="leagueId" id="leagueSelect" required>
+                    <option value="39">Premier League</option>
+                    <option value="140">La Liga</option>
+                    <option value="61">Ligue 1</option>
+                    <option value="78">Bundesliga</option>
+                    <option value="135">Serie A</option>
+                </select>
+                <label class="season">Season: <input type="text" id="seasonInput" name="season" placeholder="yyyy from 2013 to 2023" required/></label>
+                <label class="team">Team: <input type="text" name="team" id="teamInput" value="" required/></label>
+            </div>
+            <br><br><br><br><br><br>
+            <div class="buttons">
+                <input type="submit" value="View Stats" id="submitButton"/>
+            </div>
+        </form>
+    </div> <br><br><br>
+
+    <form action="<%- port %>/standings" method="post">
+        <div class="buttons">
+            <input type="submit" value="Team Standings" id="button2" />
+        </div>
+    </form> <br>
+
+    <script>
+        function getStats() {
+            let season = document.getElementById("seasonInput").value;
+            let team = document.getElementById("teamInput").value;
+            
+            if(!isNaN(season) && (Number(season) >= 2010 && Number(season) <= 2023) && team != "") {
+                if(confirm(`Get ${team}'s stats for the ${season} season?`)) {
+                    document.getElementById("teamsForm").submit();
+                    return true;
+                }else{
+                    return false;
+                }
+            } else {
+                alert("Invalid season or team box is empty. \nSeason must be between 2010-2023.");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

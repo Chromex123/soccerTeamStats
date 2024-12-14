@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Stats</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+	<div class="teamStatsTitle"> 
+		<img src="<%- logo %>" alt="" width="42" height="42"></img> &nbsp; <h1><%- teamName %> Stats</h1>
+	</div> <br><br>
+	
+	<div class="stats">
+		<div class="stat">
+			<strong>Games Played </strong> &nbsp;&nbsp; <p class="statText"><%- gamesPlayed %> </p>
+		</div>
+		<div class="stat">
+			<strong>Wins </strong>&nbsp;&nbsp; <p class="statText"><%- wins %> </p>
+		</div>
+		<div class="stat">
+			<strong>Draws </strong>&nbsp;&nbsp; <p class="statText"><%- draws %> </p>
+		</div>
+		<div class="stat">
+			<strong>Loses </strong>&nbsp;&nbsp; <p class="statText"><%- loses %> </p>
+		</div>
+		<div class="stat">
+			<strong>Goals Scored </strong>&nbsp;&nbsp; <p class="statText"><%- goals %> </p>
+		</div>
+		<div class="stat">
+			<strong>Goals Conceded </strong>&nbsp;&nbsp; <p class="statText"><%- conceded %> </p>
+		</div>
+		<div class="stat">
+			<strong>Clean Sheets </strong>&nbsp;&nbsp; <p class="statText"><%- cleanSheets %> </p>
+		</div>
+	</div>
+
+	<br><br>
+	<div class="home">
+        <a href="/" class="homeText">Go Back</a>
+	</div>
+</body>
+
+</html>

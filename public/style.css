@@ -1,0 +1,132 @@
+html {
+    font-size: 14px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(20, 20, 44);
+}
+body, html, #top5 {
+    margin: 0;
+    padding: 0;
+}
+.title, .standingsTitle, .teamStatsTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 7rem;
+    background-color: rgb(30, 30, 66);
+}
+.title {
+    color: white;
+    background-color: rgb(30, 30, 66);
+}
+.standingsTitle {
+    color: pink;
+}
+.teamStatsTitle {
+    color: skyblue;
+}
+#submitButton, #button2 {
+    font-size: 1.5rem;
+    border-radius: 2rem;
+}
+#submitButton:hover, #button2:hover {
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+#submitButton:hover {
+    background-color: rgba(135, 207, 235, 0.5);
+}
+#button2:hover {
+    background-color: rgba(255, 192, 203, 0.5);
+}
+#submitButton {
+    background-color: skyblue;
+}
+#button2 {
+    background-color: pink;
+}
+.buttons {
+    text-align: center;
+}
+.teamsField {
+    text-align: center;
+}
+.season {
+    margin-right: 8rem;
+    margin-left: 8rem;
+    color: white;
+}
+.team {
+    color: white;
+}
+.league, .team, #seasonInput, #teamInput, .season {
+    font-size: 2rem;
+}
+.standings, th, td {
+    font-size: 1.5rem;
+}
+.standings {
+    border: .3rem;
+    border-width: .1rem;
+    border-style: solid;
+}
+tr {
+    outline: thin solid;
+}
+th, td {
+    padding: .5rem;
+    padding-right: 2rem;
+}
+th {
+    background-color: rgb(30, 30, 66);
+    color: pink;
+}
+td {
+    color: white;
+}
+.standingsTable {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.home {
+    display: flex;
+    justify-content: center;
+}
+.homeText {
+    color: gold;
+}
+.stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    padding-bottom: 0;
+}
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.statText {
+    color: skyblue;
+}
+.error {
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.errorNumber {
+    font-size: 30rem;
+    margin: 0;
+}
+.notFound {
+    font-size: 3rem;
+    margin: 0;
+}
+.errorInfo {
+    margin: 1rem;
+}

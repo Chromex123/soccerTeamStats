@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Application</title>
+</head>
+
+<body>
+	<h1>Application</h1>
+        <form action="<%- port %>/processApplication" method="post" id="applicationForm">
+            <fieldset> 
+                <label>Name: <input type="text" name="name"/></label>
+                <label>Email Address: <input type="email" name="email"></label>
+                <br><br>
+                <label>GPA: <input type="text" name="gpa"/></label>
+                <br><br>
+                <label>Background Information: <br><textarea rows="5" cols="80" name="backgroundinfo"></textarea></label>
+            </fieldset>
+
+            <br>
+            <input type="reset" />
+            <input type="submit" value="Submit Application" onclick="submitApplication()" id="submitButton"/>
+        </form>
+        <hr>
+        <a href="/">HOME</a>
+
+        <script src="summerCampServer.js">
+            function submitApplication() {
+               if (confirm('Are you sure you want to submit your application? \nYou will not be able to change your information once submitted.')) {
+                   doucment.getElementById("submitButton").submit();
+                   return true;
+               } else {
+                   return false;
+               }
+            }
+        </script>
+</body>
+
+</html>
