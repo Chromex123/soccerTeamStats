@@ -75,14 +75,9 @@ async function lookUpMany(client, databaseAndCollection) {
     return table;
 }
 
-
-if(cmd.length != 3) {
-    console.log("Usage supermarketServer.js jsonFile");
-    process.exit(0);
-}
-
-const portNumber = cmd[2];
+const portNumber = 5000;
 const portLink = `http://localhost:${portNumber}`;
+
 app.listen(portNumber);
 console.log(`Server started and running at ${portLink}`);
 
@@ -246,8 +241,7 @@ app.post("/standings", (request, response) => {
 
 process.stdout.write('Stop to shutdown the server: ');
 process.stdin.on("readable", function() {
-    let input = process.stdin.read();
-    input = input.trim();
+    let input = process.stdin.read().trim();
 
     if(input == "stop") {
         async function main() {
@@ -261,11 +255,11 @@ process.stdin.on("readable", function() {
                 console.error(e);
             } finally {
                 await client.close();
+                console.log("Shutting down the server");
+                process.exit(0);
             }
         }
         main().catch(console.error);
-        console.log("Shutting down the server");
-        process.exit(0);
     }else{
         console.log(`Invalid Command: ${input}`);
         process.stdout.write('Stop to shutdown the server: ');
