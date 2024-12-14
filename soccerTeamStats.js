@@ -78,12 +78,14 @@ async function lookUpMany(client, databaseAndCollection) {
 const portNumber = 5000;
 const portLink = `http://localhost:${portNumber}`;
 
+const webLink = `https://find-soccer-team-stats.onrender.com`
+
 app.listen(portNumber);
 console.log(`Server started and running at ${portLink}`);
 
 //index.ejs
 app.get("/", (request, response) => {
-    response.render("index", {port: portLink});
+    response.render("index", {port: webLink}); //Change to portLink to run on local computer
 });
 
 // Posting the application details after submit application
@@ -239,6 +241,7 @@ app.post("/standings", (request, response) => {
     main().catch(console.error);
 });
 
+//Remove comment to run program in Vscode
 /*
 process.stdout.write('Stop to shutdown the server: ');
 process.stdin.on("readable", function() {

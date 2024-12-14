@@ -4,9 +4,9 @@
 
 **App Description:** Allow users to view the stats of different soccer teams in the top 5 leagues.
 
-**YouTube Video Link:** link
+**YouTube Video Link:** https://youtu.be/nMU_Dqnb9lU?feature=shared
 
-**Website Link:**
+**Website Link:** https://find-soccer-team-stats.onrender.com/
 
 **APIs:** RapidAPI API-FOOTBALL (https://rapidapi.com/api-sports/api/api-football)
 

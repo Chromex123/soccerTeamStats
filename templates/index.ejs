@@ -44,7 +44,7 @@
             let season = document.getElementById("seasonInput").value;
             let team = document.getElementById("teamInput").value;
             
-            if(!isNaN(season) && (Number(season) >= 2010 && Number(season) <= 2023) && team != "") {
+            if(!isNaN(season) && (Number(season) >= 2013 && Number(season) <= 2023) && team != "") {
                 if(confirm(`Get ${team}'s stats for the ${season} season?`)) {
                     document.getElementById("teamsForm").submit();
                     return true;
@@ -52,7 +52,7 @@
                     return false;
                 }
             } else {
-                alert("Invalid season or team box is empty. \nSeason must be between 2010-2023.");
+                alert("Invalid season or team box is empty. \nSeason must be between 2013-2023.");
                 return false;
             }
         }
