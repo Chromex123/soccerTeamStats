@@ -244,31 +244,6 @@ app.post("/standings", (request, response) => {
     main().catch(console.error);
 });
 
-app.post("/processAdminRemove", (request, response) => {
-    async function main() {
-        const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-        try {
-            await client.connect();
-            const result = await client.db(databaseAndCollection.db)
-            .collection(databaseAndCollection.collection)
-            .deleteMany({});
-            response.send(`<!doctype html>
-                <html lang="en">
-                <head>
-                    <meta charset="utf-8" />
-                    <title>Application Confirmation</title>
-                </head> <body> <h1>Removal Of All Applications</h1> <br>
-                All applications have been removed from the database. Number of applications removed: 
-                ${result.deletedCount}<br><br><a href="/">HOME</a> </body></html>`);
-        } catch (e) {
-            console.error(e);
-        } finally {
-            await client.close();
-        }
-    }
-    main().catch(console.error);
-});
-
 process.stdout.write('Stop to shutdown the server: ');
 process.stdin.on("readable", function() {
     let input = process.stdin.read();
@@ -288,7 +263,7 @@ process.stdin.on("readable", function() {
                 await client.close();
             }
         }
-        //main().catch(console.error);
+        main().catch(console.error);
         console.log("Shutting down the server");
         process.exit(0);
     }else{
