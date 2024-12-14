@@ -239,6 +239,7 @@ app.post("/standings", (request, response) => {
     main().catch(console.error);
 });
 
+/*
 process.stdout.write('Stop to shutdown the server: ');
 process.stdin.on("readable", function() {
     let input = process.stdin.read().trim();
@@ -265,4 +266,4 @@ process.stdin.on("readable", function() {
         process.stdout.write('Stop to shutdown the server: ');
         input = process.stdin.read();
     }
-})
+}) */
