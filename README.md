@@ -10,4 +10,4 @@
 
 **APIs:** RapidAPI API-FOOTBALL (https://rapidapi.com/api-sports/api/api-football)
 
-**Contact Email:** cnsolo@terpmail.umd.edu
+**Contact Email:** emekansolo@gmail.com
