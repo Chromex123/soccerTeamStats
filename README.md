@@ -1,10 +1,10 @@
-**Submitted by:** Chukwuemeka Nsolo (directory id: cnsolo)
+**Submitted by:** Chukwuemeka Nsolo
 
-**Group Members:** Chukwuemeka Nsolo (cnsolo), Sirish Saravannan (ssarav4)
+**Group Members:** Chukwuemeka Nsolo, Sirish Saravannan
 
-**App Description:** Allow users to view the stats of different soccer teams in the top 5 leagues.
+**Website Description:** A website that allows users to search for soccer teams from various years and displays their basic stats/data acquired from RapidAPI API-FOOTBALL. Team statistics searched for are stored to be viewed together in the form of a league standings table (teams with better stats are ranked higher), allowing the user to compare the best- and worst-performing soccer teams since 2013.
 
-**YouTube Video Link:** https://youtu.be/nMU_Dqnb9lU?feature=shared
+**Website Showcase Video Link:** https://youtu.be/LyiF_ZVCTNA?feature=shared
 
 **Website Link:** https://find-soccer-team-stats.onrender.com/
 
